@@ -1,0 +1,119 @@
+sticky header
+
+$(document).ready(function () {
+  $('.header__menu').on('click', function () {
+    $('.header__menu').toggleClass('active');
+    $('.navbar').toggleClass('menu-active');
+
+    $('header').toggleClass('bg__change');
+
+    return false;
+    
+  });
+
+});
+
+
+sticky header  ;-
+
+
+$(window).scroll(function () {
+  if ($(this).scrollTop() > 100) {
+    $('header').addClass("sticky");
+  } else {
+    $('header').removeClass("sticky");
+  }
+});
+
+
+css:-
+
+.sticky {
+    background-color: rgb(255 255 255);
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+    box-shadow: 2px 4px 8px rgba(52, 58, 64, 0.15);
+    transition-property: all;
+    transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+    transition-duration: 150ms;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    animation: headerSticky .95s ease forwards;
+
+}
+
+@keyframes headerSticky {
+    0% {
+        -webkit-transform: translateY(-100%);
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY();
+    }
+}
+
+
+
+========
+ .navbar {
+        background: #fff;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, .06);
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        left: -150px;
+        opacity: 0;
+        position: absolute;
+        transition: all .5s ease-out;
+        width: 320px;
+        z-index: 999;
+        top: 66px;
+    }
+
+
+    .navbar>ul {
+        margin: 0;
+        padding: 0px;
+        width: 0;
+        position: absolute;
+        top: 10px;
+        left: 0;
+        opacity: 0;
+        height: 100%;
+        display: block;
+        transition: all 0.2s linear;
+
+    }
+
+
+
+    .navbar>ul>li {
+        padding: 10px;
+        width: 100%;
+        background: #fff;
+        border-bottom: 1px solid rgb(179 217 219);
+        display: block;
+        margin-left: 0;
+
+    }
+
+    .navbar>ul>li i {
+
+        position: absolute;
+        top: 15px;
+        right: 0;
+    }
+
+    .navbar>ul>li.submenu {
+        display: block;
+    }
+
+    .navbar.menu-active>ul {
+        width: 300px;
+        opacity: 1;
+        transition: all 0.2s linear;
+
+    }
