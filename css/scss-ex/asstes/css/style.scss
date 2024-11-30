@@ -1,0 +1,192 @@
+// Variables
+$primary-color: #3498db;
+$secondary-color: #2ecc71;
+$font-family: 'Arial, sans-serif';
+$padding: 16px;
+
+// Mixins
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Global styles
+body {
+  font-family: $font-family;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: $primary-color;
+}
+
+// Header
+header {
+  background-color: $primary-color;
+  color: white;
+  padding: $padding;
+  text-align: center;
+
+  nav {
+    margin-top: 10px;
+
+    ul {
+      list-style: none;
+      padding: 0;
+      @include flex-center;
+
+      li {
+        margin: 0 10px;
+
+        a {
+          color: white;
+          font-weight: bold;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Hero Section
+.hero {
+  @include flex-center;
+  height: 300px;
+  background-color: $secondary-color;
+  color: white;
+  text-align: center;
+
+  h1 {
+    font-size: 3rem;
+    margin: 0;
+  }
+}
+
+// Content Section
+.content {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: $padding;
+  background: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+  h2 {
+    margin-top: 0;
+    color: $primary-color;
+  }
+
+  p {
+    line-height: 1.6;
+  }
+}
+
+// Footer
+footer {
+  background-color: #222;
+  color: #ccc;
+  text-align: center;
+  padding: $padding;
+
+  p {
+    margin: 0;
+
+    a {
+      color: $secondary-color;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+// Variables
+$breakpoint-small: 576px;
+$breakpoint-medium: 768px;
+$breakpoint-large: 992px;
+
+// Global styles for responsiveness
+body {
+  font-size: 16px;
+
+  @media only screen and (max-width: $breakpoint-large) {
+    font-size: 15px;
+  }
+
+  @media only screen and (max-width: $breakpoint-medium) {
+    font-size: 14px;
+  }
+
+  @media only screen and (max-width: $breakpoint-small) {
+    font-size: 13px;
+  }
+}
+
+// Header responsiveness
+header {
+  padding: 20px;
+
+  @media only screen and (max-width: $breakpoint-medium) {
+    text-align: left;
+  }
+
+  nav ul {
+    @include flex-center;
+
+    @media only screen and (max-width: $breakpoint-small) {
+      flex-direction: column;
+      li {
+        margin: 5px 0;
+      }
+    }
+  }
+}
+
+// Hero Section
+.hero {
+  height: 300px;
+
+  @media only screen and (max-width: $breakpoint-large) {
+    height: 250px;
+  }
+
+  @media only screen and (max-width: $breakpoint-small) {
+    height: 200px;
+    h1 {
+      font-size: 2.5rem;
+    }
+  }
+}
+
+// Content Section
+.content {
+  padding: 20px;
+
+  @media only screen and (max-width: $breakpoint-medium) {
+    padding: 15px;
+  }
+
+  @media only screen and (max-width: $breakpoint-small) {
+    padding: 10px;
+    h2 {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+// Footer
+footer {
+  padding: 20px;
+
+  @media only screen and (max-width: $breakpoint-small) {
+    text-align: center;
+  }
+}

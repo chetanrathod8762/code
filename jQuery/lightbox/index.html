@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lightbox</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/uikit.min.css">
+</head>
+
+<body>
+    <section>
+        <div uk-lightbox>
+            <a class="uk-button uk-button-default" href="images/image-1.webp" data-caption="chetan">Open Lightbox</a>
+        </div>
+        <div uk-lightbox="animation: fade">
+            <a class="uk-button uk-button-default" href="images/image-2.webp" data-caption="chetan">Open Lightbox</a>
+            <a class="uk-button uk-button-default" href="images/image-3.webp" data-caption="chetan">Open Lightbox</a>
+        </div>
+        <!-- <div uk-lightbox="animation: scale" class="chetan">
+            <a class="uk-button uk-button-default" href="images/image-4.jpeg" data-caption="chetan">Open Lightbox</a>
+            <a class="uk-button uk-button-default" href="images/image-5.jpeg" data-caption="chetan">Open Lightbox</a>
+            <a class="uk-button uk-button-default" href="images/image-6.jpg" data-caption="chetan">Open Lightbox</a>
+        </div> -->
+        <div uk-lightbox="animation: scale">
+            <a class="uk-button uk-button-default" href="images/image-4.jpeg" data-caption="Caption 1">Open Lightbox</a>
+            <a href="images/image-5.jpeg" data-caption="Caption 2"></a>
+            <a href="images/image-6.jpg" data-caption="Caption 3"></a>
+        </div>
+    </section>
+    <!-- <script src="js/jquery-3.7.1.min.js"></script> -->
+    <script src="js/uikit-icons.min.js"></script>
+    <script src="js/uikit.min.js"></script>
+    <!-- <script src="js/script.js"></script> -->
+</body>
+
+</html>

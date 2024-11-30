@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    color: #000;
+    line-height: 1.5;
+    font-weight: normal;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+table {
+    margin-bottom: 24px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Oswald', sans-serif;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+h2 {
+    font-size: 32px;
+}
+
+h3 {
+    font-size: 28px;
+}
+
+h4 {
+    font-size: 24px;
+}
+
+h5 {
+    font-size: 20px;
+}
+
+h6 {
+    font-size: 16px;
+}
+
+ul {
+    list-style: 0;
+}
+
+table td,
+table th {
+    border: 1px solid #eee;
+    padding: 15px;
+}
+
+.wrap {
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/*Middle*/
+
+.contain {
+    max-width: 1200px;
+}
+
+.owl-carousel {
+    display: flex;
+    margin: 32px auto;
+    max-width: 600px;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.item {
+    padding: 10px;
+    background-color: #4DC7A0;
+    height: 120px;
+    width: 186px;
+    color: white;
+}
